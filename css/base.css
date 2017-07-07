@@ -1,0 +1,446 @@
+/*-----------------------------
+
+	重設CSS預設樣式＋網站共通設定
+
+------------------------------*/
+
+/* 所有元素的初始間距設定 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, main, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video{
+	margin:0;
+	padding:0;
+	border: 0;
+	font-size: 100%;
+}
+
+/* 預設文字樣式 */
+body{
+	color:#666666;
+	font-family:sans-serif;
+	font-size:87.5%;
+	line-height:1.5;
+}
+
+/* 隱藏項目符號 */
+ul,ol{
+	list-style-type:none;
+}
+
+/* 設定表格框線 */ 
+table {
+	border-collapse: collapse; 
+	border-spacing: 0;
+}
+
+/* 將圖片及表單元件上下置中 */
+img, input, select, textarea { 
+	vertical-align: middle;
+}
+
+
+/* 設定連結顏色 */
+a{
+	color:#000;
+	text-decoration:none;
+}
+
+a:hover{
+	color:#AAAAAA;
+}
+
+/* 設定圖片連結 */
+a img{
+	opacity:1;
+	filter: alpha(opacity=100);
+}
+
+a:hover img{
+	opacity:0.7;
+	filter: alpha(opacity=75);
+}
+
+
+/*	clearfix
+------------------------------*/
+.clearfix:after {/*for modern browser*/
+   content: "";
+   display: block;
+   clear: both;
+}
+
+.clearfix { *zoom:1; } /*for IE6,IE7*/
+/*--------------------------*/
+		  /*版面設計*/
+/*--------------------------*/
+
+/*主要功能共通設計*/
+.inner{
+	width: 1200px;
+	margin: 0 auto;
+	
+}
+
+.inner:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+#Item1:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+h3{
+	background-color: #DDDDDD;
+}
+
+/*按鈕設計*/
+.inner_btn{
+	margin: 0 10px;
+	padding: 10px 2px;
+	border-radius: 5px;
+	font-size: 10px;
+	text-align: right;
+}
+
+.inner_btn_user{
+	width: 72px;
+	background: url('../img/img_icon/user.png') no-repeat 2px 8px;
+}
+.inner_btn_shoppingcart{
+	width: 62px;
+	background: url('../img/img_icon/shoppingcart.png') no-repeat 2px 8px;
+}
+.inner_btn_log{
+	width: 75px;
+	background: url('../img/img_icon/lock.png') no-repeat 2px 8px;
+}
+
+.commodity_btn{
+	margin: 0 10px 0 0;
+	padding: 10px 2px;
+	border: none;
+	border-radius: 5px;
+	font-size: 10px;
+	text-align: right;
+}
+
+.commodity_btn_shoppingcart{
+	width: 84px;
+	background: url('../img/img_icon/shoppingcart.png') no-repeat 2px 8px;
+}
+
+.commodity_btn_add{
+	width: 72px;
+	background: url('../img/img_icon/add.png') no-repeat 2px 8px;
+}
+
+/*滑鼠移到按鈕時*/
+.btn:hover{
+	color: #AAAAAA;
+}
+
+
+.btn_user:hover{
+	background: url('../img/img_icon/user_hover.png') no-repeat 2px 8px;
+}
+.btn_shoppingcart:hover{
+	background: url('../img/img_icon/shoppingcart_hover.png') no-repeat 2px 8px;
+}
+.btn_log:hover{
+	background: url('../img/img_icon/lock_hover.png') no-repeat 2px 8px;
+}
+.btn_add:hover{
+	background: url('../img/img_icon/add_hover.png') no-repeat 2px 8px;
+}
+
+
+/*按下按鈕瞬間*/
+.btn:active{
+}
+
+/*頁首*/
+#logo{
+	float: left;
+	padding: 10px;
+}
+#member{
+	float:right;
+	padding: 10px 0;
+}
+
+#member li{
+	display: inline;
+}
+
+/*內容區塊*/
+#contents{
+	
+	width: 960px;
+	margin: 0 auto;
+	padding: 10px 20px 10px 20px;
+	position: relative;
+	border-collapse: separate;
+	z-index: 0;
+}
+
+/*廣告播放區塊*/
+#imgvideo{
+	position: relative;
+	z-index: 0;
+}
+
+
+
+/*下拉式導覽功能區塊*/
+.pullDownNavigation a{
+	text-decoration: none;
+}
+
+#pullDownNavigation .navigation{
+	position: relative;
+	
+	float: left;
+	width: 19%;
+	height: 30px;
+	text-align: center;
+}
+
+.pullDownNavigationc{
+	position: relative;
+	z-index: 1;
+	float: left;
+	top: -1px;
+	overflow: hidden;
+	height: auto;
+	text-align: center;
+	width: 99%;
+	background:  rgba(190,190,190,0.7);
+	display: none;
+}
+
+.navigation .nav{
+	height: 32px;
+	line-height: 30px;
+	
+}
+
+
+
+
+
+/*中間主要內容*/
+#menu{
+	width: 180px;
+	position: absolute;
+	left: -180px;
+	top: 10px;
+}
+
+#main{
+	width: 800px;
+	margin: 0 auto;
+	 
+}
+
+#main_page{
+	position: relative;
+	z-index: 1;
+}
+
+h2{
+	text-align: center;
+	margin-bottom: 10px;
+	padding-bottom: 5px;
+	border-bottom: #DDDDDD 1px solid;
+}
+
+#Item1{
+	padding-bottom: 20px;
+}
+
+.commodity{
+	float: left;
+}
+
+/*左邊下拉式選單*/
+#search {
+	width: 176px;
+	background: url('../img/img_icon/searchicon.png') no-repeat 160px 3px;
+  	padding: 3px 0;
+  	margin-bottom: 20px;
+}
+
+#dropdown_parer{
+	width: 176px;
+	background: url('../img/papaer_dropdownlist.jpg');
+	padding: 10px 0 20px 0;
+
+}
+
+#dropdown_parer .paperclass {
+	border-bottom: #DDDDDD 1px solid;
+	border-collapse: collapse;
+	background: url('../img/papaer_dropdownlist.jpg');
+	margin:0 20px 0px 20px;
+	text-align: center;
+}
+
+#dropdown_parer span{
+	
+	display: block;
+}
+
+/*分類商品內容*/
+#Item2{
+	margin-bottom: 100px;
+}
+
+#classify{
+	background: #cce739;
+}
+
+#classify ul{
+	overflow: hidden;
+}
+
+#classify li{
+	text-align: center;
+	float: left;
+	width:100px;
+	border-right: #fff 1px solid
+}
+
+#classify a{
+	display: block;
+	padding: 10px 0;
+}
+
+#classify a:hover{
+	font-weight: bold;
+}
+
+#classify .selected{
+	background: #fff;
+	color: #cce739;
+}
+
+
+/*頁尾*/
+
+#footer{
+	background: #F0F0E9;
+	clear: both;
+}
+/*--------------------------*/
+		  /*產品面設計_page_commodity*/
+/*--------------------------*/
+
+#page_commodity{
+	width: 800px;
+	margin: 0 auto;
+}
+
+/*麵包屑式導航*/
+#g_nav_page2{
+	padding: 10px 20px;
+	background: #F5F5F5;
+}
+
+#g_nav_page2 li{
+	display: inline;
+	font-size: 83%;
+	padding-right: 15px;
+	background: url(../img/img_icon/ico_arw01.png) right center no-repeat;
+}
+/*商品主要內容*/
+#commodity_img{
+	float: left;
+	margin: 20px 0;
+	vertical-align:top;
+}
+
+
+#commodity_name{
+	float: right;	
+	margin: 20px 0;
+}
+
+#commodity_introduction{
+	clear: both;
+}
+
+/*商品介紹*/
+#page_commodity dt{
+	clear: left;
+	float: left;
+}
+
+/*相關商品*/
+.Related{
+	float: left;
+}
+
+/*--------------------------*/
+		  /*產品面設計_page_photocopy*/
+/*--------------------------*/
+
+
+.commodity_copy{
+	float: left;
+}
+
+#photocopy{
+	
+}
+
+#photocopy ul{
+
+	overflow: hidden;
+}
+
+#photocopy li
+{
+	background: #cce739;
+	text-align: center;
+	float: left;
+	width: 100px; 
+	border-right: #fff 1px solid;
+	
+	border-top: #fff 1px solid;
+}
+
+#photocopy li:first-child{
+	border-left: #fff 1px solid;
+}
+
+.nav_contents a{
+	display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+#photocopy_page{
+	margin:-1px 0 20px 0;
+	padding: 20px;
+}
+
+#photocopy_page:after{
+	content: "";
+	display: block;
+	clear: both;
+}

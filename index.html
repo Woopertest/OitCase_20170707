@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test_oitcase</title>
+	<meta charset="utf-8">
+	<link href="css/flexslider.css" rel="stylesheet"  media="all">
+	<link href="css/base.css" rel="stylesheet" media="all" >
+</head>
+<body>
+<!-- 頁首 -->
+
+<header id="header">
+<div class="inner">
+<h1 id="logo"><a href="#wrap"><img src="img/logo.png" width="300" height="56" alt="LOGO"></a></h1>
+<ul id="member">
+	<li><input type="submit" value="我的帳戶" class="btn btn_user inner_btn inner_btn_user"></li>
+	<li><input type="submit" value="購物車" class="btn btn_shoppingcart inner_btn inner_btn_shoppingcart"></li>
+	<li><input type="submit" value="登入/登出" class="btn btn_log inner_btn inner_btn_log"></li>
+</ul>
+</div><!--/.inner-->
+</header>
+
+<nav id="gnav">
+<div class="inner">
+<div id='pullDownNavigation'>
+	<div class="navigation navigation1" data-targetID='pullDownNavigation1'>
+		<div class="nav">
+			<a href='index.html'>首頁</a>
+		</div><!-- /.nav --><!--導覽1功能表-->
+	</div><!-- /.navigation .navigation1 -->
+	<div class="navigation navigation1" data-targetID='pullDownNavigation2'>
+		<div class="nav">
+			<a href='#'>客製化商品 ▼</a>
+		</div><!-- /.nav --><!--導覽2功能表-->
+		<div class="pullDownNavigationc" id='pullDownNavigation2'>
+			<div>
+				<a href="#">客製化商品1</a>
+			</div>
+			<div>
+				<a href="#">客製化商品2</a>
+			</div>
+			<div>
+				<a href="#">客製化商品3</a>
+			</div>
+			<div>
+				<a href="#">客製化商品4</a>
+			</div>
+			<div>
+				<a href="#">客製化商品5</a>
+			</div>
+		</div><!-- /#pullDownNavigation2 -->
+	</div><!-- /.navigation .navigation1 -->
+	<div class="navigation navigation1" data-targetID='pullDownNavigation3'>
+		<div class="nav">
+			<a href='#'>線上詢價 ▼</a>
+		</div><!-- /.nav --><!--導覽3功能表-->
+		<div class="pullDownNavigationc" id='pullDownNavigation3'>
+			<div>
+				<a href="#">線上詢價1</a>
+			</div>
+			<div>
+				<a href="#">線上詢價2</a>
+			</div>
+		</div><!-- /#pullDownNavigation3 -->
+	</div><!-- /.navigation .navigation1 -->
+	<div class="navigation navigation1" data-targetID='pullDownNavigation4'>
+		<div class="nav">
+			<a href='#'>採購紀錄</a>
+		</div><!-- /.nav --><!--導覽4功能表-->
+	</div><!-- /.navigation .navigation1 -->
+</div><!-- /#pullDownNavigation -->
+</div><!-- /.inner -->
+</nav><!-- /#gnav -->
+
+<nav id="imgvideo">
+<div class="flexslider">
+  <ul class="slides">
+    <li>
+      <img src="img/01-boxed.jpg" alt="廣告1" />
+    </li>
+    <li>
+      <img src="img/02-boxed.jpg" alt="廣告2"/>
+    </li>
+    <li>
+      <img src="img/03-boxed.jpg" alt="廣告3"/>
+    </li>
+  </ul>
+</div><!-- /.flexdlider -->
+</nav><!-- /#imgvideo -->
+
+<div id="contents">
+<nav id="menu">
+<h2 class="title">搜尋</h2>
+<input type="text" placeholder="搜尋" id="search">
+<h2 class="title">分類選單</h2>
+<div id ="dropdown_parer">
+<ul>
+	<li class="paperclass">
+		<span><a href="javascript:void(0)">影印紙</a>
+		<a href="javascript:void(0)" class="treeIcon">+</a></span>
+		<ul class="navv">
+			<li><a href="#logo" onclick="getData_main('page_photocopy.html'); clear_imagevideo();">影印紙1</a></li>
+			<li>影印紙1-1</li>
+			<li>影印紙2</li>
+			<li>影印紙2-1</li>
+		</ul>
+	</li>
+	<li class="paperclass">
+		<span><a href="javascript:void(0)">報表紙</a>
+		<a href="javascript:void(0)" class="treeIcon">+</a></span>
+		
+		<ul class="navv">
+			<li>報表紙1</li>
+			<li>報表紙1-1</li>
+			<li>報表紙2</li>
+			<li>報表紙2-1</li>
+		</ul>
+	</li>
+	<li class="paperclass">
+		<span><a href="javascript:void(0)">辦公用品</a>
+		<a href="javascript:void(0)" class="treeIcon">+</a></span>
+		<ul class="navv">
+			<li>辦公用品1</li>
+			<li>辦公用品1-1</li>
+			<li>辦公用品2</li>
+			<li>辦公用品2-1</li>
+		</ul>
+	</li>
+	<li class="paperclass"><a href="javascript:void(0)">貼紙</a></li>
+	<li class="paperclass"><a href="javascript:void(0)">紙卷</a></li>
+	<li class="paperclass"><a href="javascript:void(0)">信封</a></li>
+	<li class="paperclass"><a href="javascript:void(0)">家庭用紙</a></li>
+</ul>
+</div><!-- /#dropdown_parer -->
+</nav><!-- /#menu -->
+
+																<!--******首頁內容******-->
+<main id="main">
+<div id="main_page">
+<!-- 主要商品頁面 -->
+</div><!-- /#main_page -->
+<nav id="classify" class="nav_contents">
+<ul>
+	<li><a href="javascript:;" onclick="changeGn()" class="selected on_classify off_classify" id="hoverGn" >綠色辦公系列</a></li>
+	<li><a href="javascript:;" onclick="changeEqs()" id="hoverEqs" class="on_classify off_classify">細膩辦公系列</a></li>
+	<li><a href="javascript:;" onclick="changeCr()" id="hoverCr" class="on_classify off_classify">清晰辦公系列</a></li>
+	<li><a href="javascript:;" onclick="changeBt()" id="hoverBt" class="on_classify off_classify">亮麗辦公系列</a></li>
+	<li><a href="javascript:;" onclick="changeHp()" id="hoverHp" class="on_classify off_classify">快樂辦公系列</a></li>
+</ul>
+</nav><!-- /#classify -->
+
+<section id="Item2" class="clearfix" >
+<div id="green">
+<div class="commodity" >
+<h3><img src="img/gallery1.jpg" width="200" height="200" alt="gallery"></h3>
+<p>
+$200<br>
+綠色辦公用品1<br>
+<input type="submit" value="放入購物車" class="btn btn_shoppingcart commodity_btn commodity_btn_shoppingcart">
+<input type="submit" value="詳細資料" class="btn btn_add commodity_btn commodity_btn_add">
+</p>
+</div><!-- /.commodity -->
+
+<div class="commodity">
+<h3><img src="img/gallery2.jpg" width="200" height="200" alt="gallery"></h3>
+<p>
+$200<br>
+綠色辦公用品2<br>
+<input type="submit" value="放入購物車" class="btn btn_shoppingcart commodity_btn commodity_btn_shoppingcart">
+<input type="submit" value="詳細資料" class="btn btn_add commodity_btn commodity_btn_add">
+</p>
+</div><!-- /.commodity -->
+
+<div class="commodity">
+<h3><img src="img/gallery3.jpg" width="200" height="200" alt="gallery"></h3>
+<p>
+$200<br>
+綠色辦公用品3<br>
+<input type="submit" value="放入購物車" class="btn btn_shoppingcart commodity_btn commodity_btn_shoppingcart">
+<input type="submit" value="詳細資料" class="btn btn_add commodity_btn commodity_btn_add">
+</p>
+</div><!-- /.commodity -->
+
+<div class="commodity">
+<h3><img src="img/gallery4.jpg" width="200" height="200" alt="gallery"></h3>
+<p>
+$200<br>
+綠色辦公用品4<br>
+<input type="submit" value="放入購物車" class="btn btn_shoppingcart commodity_btn commodity_btn_shoppingcart">
+<input type="submit" value="詳細資料" class="btn btn_add commodity_btn commodity_btn_add">
+</div><!-- /.commodity -->
+</div><!-- /#green -->
+
+<div id="exquisite" style="display: none">
+<div class="commodity">
+<h3><img src="img/gallery4.jpg" width="200" height="200" alt="gallery"></h3>
+<p>
+$200<br>
+細膩辦公用品1<br>
+<input type="submit" value="放入購物車" class="btn btn_shoppingcart commodity_btn commodity_btn_shoppingcart">
+<input type="submit" value="詳細資料" class="btn btn_add commodity_btn commodity_btn_add">
+</p>
+</div><!-- /.commodity -->
+
+<div class="commodity">
+<h3><img src="img/gallery3.jpg" width="200" height="200" alt="gallery"></h3>
+<p>
+$200<br>
+細膩辦公用品2<br>
+<input type="submit" value="放入購物車" class="btn btn_shoppingcart commodity_btn commodity_btn_shoppingcart">
+<input type="submit" value="詳細資料" class="btn btn_add commodity_btn commodity_btn_add">
+</p>
+</div><!-- /.commodity -->
+
+<div class="commodity">
+<h3><img src="img/gallery2.jpg" width="200" height="200" alt="gallery"></h3>
+<p>
+$200<br>
+細膩辦公用品3<br>
+<input type="submit" value="放入購物車" class="btn btn_shoppingcart commodity_btn commodity_btn_shoppingcart">
+<input type="submit" value="詳細資料" class="btn btn_add commodity_btn commodity_btn_add">
+</p>
+</div><!-- /.commodity -->
+
+<div class="commodity">
+<h3><img src="img/gallery1.jpg" width="200" height="200" alt="gallery"></h3>
+<p>
+$200<br>
+細膩辦公用品4<br>
+<input type="submit" value="放入購物車" class="btn btn_shoppingcart commodity_btn commodity_btn_shoppingcart">
+<input type="submit" value="詳細資料" class="btn btn_add commodity_btn commodity_btn_add">
+</div><!-- /.commodity -->
+</div><!-- /#exquisite -->
+
+<div id="clear" style="display: none">
+<div class="commodity">
+<h3><img src="img/gallery3.jpg" width="200" height="200" alt="gallery"></h3>
+<p>
+$200<br>
+清晰辦公用品1<br>
+<input type="submit" value="放入購物車" class="btn btn_shoppingcart commodity_btn commodity_btn_shoppingcart">
+<input type="submit" value="詳細資料" class="btn btn_add commodity_btn commodity_btn_add">
+</p>
+</div><!-- /.commodity -->
+
+<div class="commodity">
+<h3><img src="img/gallery4.jpg" width="200" height="200" alt="gallery"></h3>
+<p>
+$200<br>
+清晰辦公用品2<br>
+<input type="submit" value="放入購物車" class="btn btn_shoppingcart commodity_btn commodity_btn_shoppingcart">
+<input type="submit" value="詳細資料" class="btn btn_add commodity_btn commodity_btn_add">
+</p>
+</div><!-- /.commodity -->
+
+<div class="commodity">
+<h3><img src="img/gallery1.jpg" width="200" height="200" alt="gallery"></h3>
+<p>
+$200<br>
+清晰辦公用品3<br>
+<input type="submit" value="放入購物車" class="btn btn_shoppingcart commodity_btn commodity_btn_shoppingcart">
+<input type="submit" value="詳細資料" class="btn btn_add commodity_btn commodity_btn_add">
+</p>
+</div><!-- /.commodity -->
+
+<div class="commodity">
+<h3><img src="img/gallery2.jpg" width="200" height="200" alt="gallery"></h3>
+<p>
+$200<br>
+清晰辦公用品4<br>
+<input type="submit" value="放入購物車" class="btn btn_shoppingcart commodity_btn commodity_btn_shoppingcart">
+<input type="submit" value="詳細資料" class="btn btn_add commodity_btn commodity_btn_add">
+</div><!-- /.commodity -->
+</div><!-- /#clear -->
+
+<div id="bright" style="display: none">
+<div class="commodity">
+<h3><img src="img/gallery2.jpg" width="200" height="200" alt="gallery"></h3>
+<p>
+$200<br>
+亮麗辦公用品1<br>
+<input type="submit" value="放入購物車" class="btn btn_shoppingcart commodity_btn commodity_btn_shoppingcart">
+<input type="submit" value="詳細資料" class="btn btn_add commodity_btn commodity_btn_add">
+</p>
+</div><!-- /.commodity -->
+
+<div class="commodity">
+<h3><img src="img/gallery3.jpg" width="200" height="200" alt="gallery"></h3>
+<p>
+$200<br>
+亮麗辦公用品2<br>
+<input type="submit" value="放入購物車" class="btn btn_shoppingcart commodity_btn commodity_btn_shoppingcart">
+<input type="submit" value="詳細資料" class="btn btn_add commodity_btn commodity_btn_add">
+</p>
+</div><!-- /.commodity -->
+
+<div class="commodity">
+<h3><img src="img/gallery4.jpg" width="200" height="200" alt="gallery"></h3>
+<p>
+$200<br>
+亮麗辦公用品3<br>
+<input type="submit" value="放入購物車" class="btn btn_shoppingcart commodity_btn commodity_btn_shoppingcart">
+<input type="submit" value="詳細資料" class="btn btn_add commodity_btn commodity_btn_add">
+</p>
+</div><!-- /.commodity -->
+
+<div class="commodity">
+<h3><img src="img/gallery1.jpg" width="200" height="200" alt="gallery"></h3>
+<p>
+$200<br>
+亮麗辦公用品4<br>
+<input type="submit" value="放入購物車" class="btn btn_shoppingcart commodity_btn commodity_btn_shoppingcart">
+<input type="submit" value="詳細資料" class="btn btn_add commodity_btn commodity_btn_add">
+</div><!-- /.commodity -->
+</div><!-- /#bright -->
+
+<div id="happy" style="display: none">
+<div class="commodity">
+<h3><img src="img/gallery1.jpg" width="200" height="200" alt="gallery"></h3>
+<p>
+$200<br>
+快樂辦公用品1<br>
+<input type="submit" value="放入購物車" class="btn btn_shoppingcart commodity_btn commodity_btn_shoppingcart">
+<input type="submit" value="詳細資料" class="btn btn_add commodity_btn commodity_btn_add">
+</p>
+</div><!-- /.commodity -->
+
+<div class="commodity">
+<h3><img src="img/gallery3.jpg" width="200" height="200" alt="gallery"></h3>
+<p>
+$200<br>
+快樂辦公用品2<br>
+<input type="submit" value="放入購物車" class="btn btn_shoppingcart commodity_btn commodity_btn_shoppingcart">
+<input type="submit" value="詳細資料" class="btn btn_add commodity_btn commodity_btn_add">
+</p>
+</div><!-- /.commodity -->
+
+<div class="commodity">
+<h3><img src="img/gallery2.jpg" width="200" height="200" alt="gallery"></h3>
+<p>
+$200<br>
+快樂辦公用品3<br>
+<input type="submit" value="放入購物車" class="btn btn_shoppingcart commodity_btn commodity_btn_shoppingcart">
+<input type="submit" value="詳細資料" class="btn btn_add commodity_btn commodity_btn_add">
+</p>
+</div><!-- /.commodity -->
+
+<div class="commodity">
+<h3><img src="img/gallery4.jpg" width="200" height="200" alt="gallery"></h3>
+<p>
+$200<br>
+快樂辦公用品4<br>
+<input type="submit" value="放入購物車" class="btn btn_shoppingcart commodity_btn commodity_btn_shoppingcart">
+<input type="submit" value="詳細資料" class="btn btn_add commodity_btn commodity_btn_add">
+</p>
+</div><!-- /.commodity -->
+</div><!-- happy -->
+</section><!--/#Item2-->
+</main><!-- /#main -->
+</div><!-- /#contents -->
+
+
+<footer id="footer">
+<div class="inner">
+<h2>123</h2>
+<p><small>testtest~~~~~~~@test</small></p>
+</div><!--/.inner-->
+</footer>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/base.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+	<script type="text/javascript">
+  		$(window).load(function() {
+    	$('.flexslider').flexslider();
+  		});
+	</script>
+</body>
+</html>
